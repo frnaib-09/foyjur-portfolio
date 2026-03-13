@@ -153,10 +153,12 @@
 @media (min-width: 351px) and (max-width: 390px) {
     .mblHdr .navLeft .navIcon h3 {
         font-size: 14px;
+        letter-spacing: 3px;
     }
 
     .mblHdr .navLeft .navIcon p {
         font-size: 7px;
+        letter-spacing: 4px;
     }
 
     #banner {
