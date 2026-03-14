@@ -1,11 +1,15 @@
 @media (min-width: 320px) and (max-width: 350px) {
-    .mblHdr .navLeft .navIcon h3 {
+    header nav a img {
+        width: 70px;
+    }
+
+    header nav h2 {
         font-size: 11px;
     }
 
-    .mblHdr .navLeft .navIcon p {
-        font-size: 7px;
-        letter-spacing: 4px;
+    header nav p {
+        font-size: 8px;
+        letter-spacing: 3px;
     }
 
     #banner {
@@ -101,7 +105,7 @@
     }
 
     #about {
-        height: 1260px;
+        height: 1100px;
     }
 
     .aboutLeft h1 {
@@ -109,7 +113,7 @@
     }
 
     .aboutLeft p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .aboutRight {
@@ -119,7 +123,7 @@
     .aboutRight .toppings .topppu {
         border-radius: 20px;
         padding: 20px;
-        max-height: 220px;
+        width: 150px;
     }
 
     .aboutRight .toppings .topppu iconify-icon {

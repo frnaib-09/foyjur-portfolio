@@ -13,60 +13,43 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <header>
-        <div class="container d-sm-none d-none d-lg-block">
-            <div class="row">
-                <div class="navLeft col-lg-4 text-start">
-                    <a href="#">
-                        <img src="./images/web logo.png" alt="" class="img-fluid" width="80">
-                        <div class="navIcon">
-                            <h3>Foyjur Rafee</h3>
-                            <p>Full Stack Developer</p>
-                        </div>
-                    </a>
-                    
-                </div>
-                <ul class="navRight col-lg-8 text-end">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#expertise">Expartise</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Journey</a></li>
-                    <li><button>Let's Talk <iconify-icon icon="streamline:mail-send-email-message"></iconify-icon></button></li>
-                </ul>
-            </div>
-        </div>
-        <div class="mblHdr d-lg-none d-block">
-            <div class="container ">
-                <div class="row">
-                    <div class="navLeft col-10">
-                        <a href="#">
-                            <img src="./images/web logo.png" alt="" width="60">
-                            <div class="navIcon">
-                                <h3>Foyjur Rafee</h3>
-                                <p>Full Stack Developer</p>
-                            </div>
-                        </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex navbarr" href="#">
+                    <img src="./images/web logo.png" alt="" class="img-fluid">
+                    <div class="logoStyle">
+                        <h2>Foyjur Rafee</h2>
+                        <p>Full Stack Developer</p>
                     </div>
-                    <div class="col-2">
-                        <p class="d-inline-flex gap-1">
-                            <a class="btn btn_primary menuTab" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><iconify-icon icon="ri:menu-3-line"></iconify-icon></a>
-                        </p>
-                    </div>
-                    <div class="collapse" id="collapseExample">
-                        <div class="menu card card-body">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#expertise">Expartise</a></li>
-                                <li><a href="#">Work</a></li>
-                                <li><a href="#">Journey</a></li>
-                                <li><button>Let's Talk <iconify-icon icon="streamline:mail-send-email-message"></iconify-icon></button></li>
-                            </ul>
-                        </div>
-                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <iconify-icon class="menuTab" icon="gg:menu-right-alt" width="24" height="24"></iconify-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Expertise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Journey</a>
+                        </li>
+                        <li class="nav-item">
+                            <button>Let's Talk <iconify-icon icon="streamline:mail-send-email-message"></iconify-icon></button>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
     <!-- ----------------------------------------------------------------------- -->
 

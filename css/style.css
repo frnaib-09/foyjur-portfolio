@@ -64,12 +64,11 @@ iconify-icon {
 
 /* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
-.mblHdr,
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    padding: 10px 20px;
     background: rgba(3, 7, 18, 0.8);
     backdrop-filter: blur(12px);
     position: fixed;
@@ -81,9 +80,6 @@ header {
     border-top: none;
     border-bottom: none;
     z-index: 1000000000 !important;
-}
-
-header {
     animation-name: strech;
     animation-timeline: scroll(Y);
 }
@@ -113,26 +109,21 @@ header {
     }
 }
 
-.mblHdr {
-    padding: 12px 0;
-}
-
-.mblHdr .navLeft,
-header .navLeft {
+.navbarr {
     display: flex;
     align-items: center;
 }
 
-header .navLeft a {
-    display: flex;
-    align-items: center;
-}
-.navIcon {
-    display: inline;
+.logoStyle {
+    display: block;
 }
 
-.mblHdr .navIcon h3,
-header .navLeft .navIcon h3 {
+
+header nav a img {
+    width: 100px;
+}
+
+header nav h2 {
     background: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -144,12 +135,7 @@ header .navLeft .navIcon h3 {
     margin-left: 8px;
 }
 
-.mblHdr .navLeft .navIcon h3 {
-    font-size: 16px;
-}
-
-.mblHdr .navLeft .navIcon p,
-header .navLeft .navIcon p {
+header nav p {
     color: #94A3B8;
     margin-left: 8px;
     font-family: "Orbitron", sans-serif;
@@ -158,41 +144,27 @@ header .navLeft .navIcon p {
     margin-top: 2px;
 }
 
-.mblHdr .navLeft .navIcon p {
-    font-size: 8px;
-}
-
-.mblHdr .navRight,
-header .navRight  {
+#navbarSupportedContent ul {
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-.mblHdr .navRight button {
-    background: transparent;
-    border: none;
-    font-size: 30px;
-    padding: 0 10px 2px;
-    border-radius: 10px;
-    color: #2563EB;
-    transition: .25s;
-}
-
-header .navRight li {
+#navbarSupportedContent ul li {
     padding: 0 12px;
 }
 
-header .navRight li a {
+#navbarSupportedContent ul li a {
+    color: #7a7a7a;
     font-size: 16px;
     transition: .25s;
 }
 
-header .navRight li a:hover {
+#navbarSupportedContent ul li a:hover {
     color: #FFFFFF;
 }
 
-header .navRight button {
+header nav ul li button {
     background: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
     color: #FFFFFF;
     padding: 10px 24px;
@@ -206,17 +178,25 @@ header .navRight button {
     transition: 0.25s ease;
 }
 
-header .navRight button iconify-icon {
+header nav ul li button iconify-icon {
     margin-left: 5px;
     transition: .25s;
 }
 
-header .navRight button:hover {
+header nav ul li button:hover {
     box-shadow: 0px 10px 20px -5px rgba(0, 163, 177, 0.5);
 }
 
-header .navRight button:hover iconify-icon {
+header nav ul li button:hover iconify-icon {
     transform: translateX(5px);
+}
+
+.menuTab {
+    color: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
+}
+
+.menuTab:focus {
+    outline: 0;
 }
 /* -------------------------------------------------------------------------- */
 
@@ -229,7 +209,7 @@ header .navRight button:hover iconify-icon {
 }
 
 #banner .bannerLeft {
-    margin-top: 130px;
+    margin-top: 150px;
     color: white;
 }
 
