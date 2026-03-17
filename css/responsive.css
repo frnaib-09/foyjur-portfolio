@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 350px) {
+@media (min-width: 320px) and (max-width: 390px) {
     header {
         border-radius: 25px;
     }
@@ -157,7 +157,7 @@
     }
 }
 
-@media (min-width: 351px) and (max-width: 390px) {
+/* @media (min-width: 351px) and (max-width: 390px) {
     .mblHdr .navLeft .navIcon h3 {
         font-size: 14px;
         letter-spacing: 3px;
@@ -270,4 +270,4 @@
     #expertise .heading p {
         font-size: 14px;
     }
-}
+} */

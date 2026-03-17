@@ -175,6 +175,47 @@ header nav p {
     border-right: 2px solid #fff;
 }
 
+.hamburger {
+    font: inherit;
+    display: flex;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity,filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+}
+
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before {
+    background-color: #007bff;
+}
+
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #007bff;
+    right: 0;
+}
+
 header nav ul li button {
     background: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
     color: #FFFFFF;
@@ -396,8 +437,9 @@ header nav ul li button:hover iconify-icon {
 .bannerRight .manWrapper::before{
     content: "";
     position: absolute;
-    width: 200%;
-    height: 200%;
+    width: 100%;
+    height: 400%;
+    inset: 1;
     top: -50%;
     left: -50%;
     background: linear-gradient(90deg,#00E5FF,#8A2BE2,#FF3CAC,#00E5FF);
@@ -683,7 +725,7 @@ header nav ul li button:hover iconify-icon {
     scroll-margin-top: 100px;
 }
 
-#expertise .heading h5 {
+.heading h5 {
   color: #0099cc;
   font-size: 14px;
   font-weight: 700;
@@ -692,7 +734,7 @@ header nav ul li button:hover iconify-icon {
   margin-bottom: 12px;
 }
 
-#expertise .heading h1 {
+.heading h1 {
   color: #1a1a1a;
   font-size: 56px;
   font-weight: 700;
@@ -701,7 +743,7 @@ header nav ul li button:hover iconify-icon {
   margin-bottom: 24px;
 }
 
-#expertise .heading p {
+.heading p {
   color: #555555; 
   font-size: 20px;
   line-height: 1.6;
@@ -710,6 +752,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .skillCard {
+    background: #fff;
     border: 1px solid #c7c7c7;
     border-radius: 16px;
     padding: 32px;
@@ -717,6 +760,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .skillCard:hover {
+    background: #dbe3ea;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -770,4 +814,30 @@ header nav ul li button:hover iconify-icon {
     font-size: 14px;
     color: #333;
 }
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                Work Section                                */
+#work .categories {
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 40px; 
+}
+
+#work .categories button {
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#work .categories button.active {
+    background: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
+    color: white; 
+    border-color: #007bff;
+}
+
+
 /* -------------------------------------------------------------------------- */
