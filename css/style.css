@@ -62,15 +62,20 @@ iconify-icon {
     vertical-align: middle;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
 header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background: rgba(3, 7, 18, 0.8);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: fixed;
     top: 20px;
     left: 50%;
@@ -78,7 +83,7 @@ header {
     width: 95%;
     border-radius: 50px;
     border-top: none;
-    border-bottom: none;
+    scroll-margin-top: 80px;
     z-index: 1000000000 !important;
     animation-name: strech;
     animation-timeline: scroll(Y);
@@ -155,13 +160,19 @@ header nav p {
 }
 
 #navbarSupportedContent ul li a {
-    color: #7a7a7a;
+    color: #c7c7c7;
     font-size: 16px;
-    transition: .25s;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+    transition: all .25s ease;
 }
 
 #navbarSupportedContent ul li a:hover {
-    color: #FFFFFF;
+    color: #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
 }
 
 header nav ul li button {
@@ -196,7 +207,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .menuTab:focus {
-    outline: 0;
+    box-shadow: none;
 }
 /* -------------------------------------------------------------------------- */
 
@@ -206,6 +217,7 @@ header nav ul li button:hover iconify-icon {
     background: linear-gradient(90deg,#071421 0%,#0E2238 50%,#0B1020 100%);
     height: 900px;
     position: relative;
+    scroll-margin-top: 80px;
 }
 
 #banner .bannerLeft {
@@ -562,6 +574,7 @@ header nav ul li button:hover iconify-icon {
 #about {
     background: radial-gradient(circle at 20% 30%, #082f49 0%,    #020617 70%,   #000000 100%);
     height: 800px;
+    scroll-margin-top: 80px;
 }
 
 .aboutLeft h6 {
@@ -663,12 +676,11 @@ header nav ul li button:hover iconify-icon {
 }
 /* -------------------------------------------------------------------------- */
 
-
-
 /* -------------------------------------------------------------------------- */
 /*                              Expertise section                             */
 #expertise {
-    margin-top: 100px;
+    margin: 100px 0;
+    scroll-margin-top: 100px;
 }
 
 #expertise .heading h5 {
@@ -697,53 +709,65 @@ header nav ul li button:hover iconify-icon {
   margin-bottom: 50px;
 }
 
-.taskGrid {
-    display: flex;
-    flex-wrap: wrap;
+.skillCard {
+    border: 1px solid #c7c7c7;
+    border-radius: 16px;
+    padding: 32px;
+    transition: 0.3s ease;
 }
 
-.taskCard {
-    background-color: #f8f9fa;
-    border: 1px solid #d1d5db;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    padding: 30px 20px;
+.skillCard:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.taskCard .taskLeft {
-    background: linear-gradient(135deg, #a855f7, #7e22ce);
+.skillCard .iconify {
     width: 60px;
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
     color: #fff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: .25s;
 }
 
-.taskCard .taskData h2 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    color: #1a1a1a;
+.skillCard:hover .iconify {
+    transform: scale(1.1);
 }
 
-.taskCard .taskData p {
-    color: #666;
+.skillCard .cardData {
+    margin-left: 30px;
+}
+
+.skillCard .cardData h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.skillCard .cardData p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
     line-height: 1.6;
-    margin-bottom: 24px;
 }
 
-.taskCard .taskTags {
+.skillCard .cardData .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.taskCard .taskTags span {
-    border: 1px solid #d1d5db;
+.skillCard .cardData .tags span {
+    background: #f1f1f1;
+    padding: 6px 12px;
+    border: 1px solid #c7c7c7;
     border-radius: 20px;
-    padding: 6px 16px;
-    font-size: 0.85rem;
-    color: #374151;
+    font-size: 14px;
+    color: #333;
 }
 /* -------------------------------------------------------------------------- */
