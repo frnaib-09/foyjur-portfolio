@@ -242,15 +242,169 @@
             <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="categories">
-                        <button class="filter-btn active" data-filtr="all">All Projects</button>
-                        <button class="filter-btn" data-filtr="web">Web Apps</button>
-                        <button class="filter-btn" data-filtr="mobile">Mobile</button>
-                        <button class="filter-btn" data-filtr="api">API</button>
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="web">Web Apps</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile</button>
+                        <button class="filter-btn" data-filter="api">API</button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="list text-end">
-                        <p><b>6</b> projects</p>
+                        <p><b><span id="count">6</span></b> projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Featured Projects</h1>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card proCard" data-category="web">
+                        <div class="img-container">
+                            <img src="./images/saas.jpg" class="card-img-top" alt="">
+                            <div class="quickLinks">
+                                <a href="#"><iconify-icon icon="teenyicons:github-outline"></iconify-icon></a>
+                                <a href="#"><iconify-icon icon="heroicons:arrow-top-right-on-square-20-solid"></iconify-icon></a>
+                            </div>
+                            <div class="tag">
+                                <span>2024</span>
+                                <span>Full Stack Development</span>
+                            </div>
+                            <h2>SaaS Analytics Platform</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Multi-tenant SaaS application with real-time analytics, subscription management, and comprehensive API...</p>
+                            <div class="statPlate">
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="radix-icons:people" width="24" height="24"></iconify-icon></span>
+                                        <h5>10,000+</h5>
+                                        <h6>10K+ Users</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow" width="24" height="24"></iconify-icon></span>
+                                        <h5>99.99%</h5>
+                                        <h6>99.99% Uptime</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="mage:zap" width="24" height="24"></iconify-icon></span>
+                                        <h5>10,000+</h5>
+                                        <h6>10K+ Users</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="skills">
+                                <span>Laravel</span>
+                                <span>Livewire</span>
+                                <span>Stripe</span>
+                                <span>Tailwind</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card proCard" data-category="web">
+                        <div class="img-container">
+                            <img src="./images/e com.jpg" class="card-img-top" alt="">
+                            <div class="quickLinks">
+                                <a href="#"><iconify-icon icon="teenyicons:github-outline"></iconify-icon></a>
+                                <a href="#"><iconify-icon icon="heroicons:arrow-top-right-on-square-20-solid"></iconify-icon></a>
+                            </div>
+                            <div class="tag">
+                                <span>2024</span>
+                                <span>Full Stack Development</span>
+                            </div>
+                            <h2>E-Commerce Marketplace</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Complete marketplace solution with vendor management, inventory tracking, and automated order fulfillment....</p>
+                            <div class="statPlate">
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="carbon:sales-ops" width="24" height="24"></iconify-icon></span>
+                                        <h5>$500K+</h5>
+                                        <h6>Monthly Sales</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="radix-icons:people" width="24" height="24"></iconify-icon></span>
+                                        <h5>500K+</h5>
+                                        <h6>Active Vendors</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow" width="24" height="24"></iconify-icon></span>
+                                        <h5>+120%</h5>
+                                        <h6>Growth Rate</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="skills">
+                                <span>Laravel</span>
+                                <span>React.js</span>
+                                <span>MySQL</span>
+                                <span>Elasticsearch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" >
+                    <div class="card proCard" data-category="web">
+                        <div class="img-container">
+                            <img src="./images/healthcare.jpg" class="card-img-top" alt="">
+                            <div class="quickLinks">
+                                <a href="#"><iconify-icon icon="teenyicons:github-outline"></iconify-icon></a>
+                                <a href="#"><iconify-icon icon="heroicons:arrow-top-right-on-square-20-solid"></iconify-icon></a>
+                            </div>
+                            <div class="tag">
+                                <span>2023</span>
+                                <span>Enterprise Application</span>
+                            </div>
+                            <h2>Healthcare Management System</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">HIPAA-compliant patient management system with appointment scheduling, electronic health records...</p>
+                            <div class="statPlate">
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="radix-icons:people" width="24" height="24"></iconify-icon></span>
+                                        <h5>50K+</h5>
+                                        <h6>Patients</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="simple-line-icons:badge" width="24" height="24"></iconify-icon></span>
+                                        <h5>150+</h5>
+                                        <h6>Clients</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="statistics">
+                                        <span><iconify-icon icon="mage:zap" width="24" height="24"></iconify-icon></span>
+                                        <h5>1M+</h5>
+                                        <h6>Appointments</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="skills">
+                                <span>Laravel</span>
+                                <span>React.js</span>
+                                <span>MySQL</span>
+                                <span>AWS</span>
+                                <span>HIPAA</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
