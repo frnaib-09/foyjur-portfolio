@@ -320,6 +320,10 @@
         color: #333;
     }
 
+    #work h2 {
+        font-size: 24px;
+    }
+
     #work .categories {
         margin-bottom: 20px;
     }
@@ -331,6 +335,20 @@
         border: 1px solid #ddd;
         cursor: pointer;
         transition: 0.3s;
+    }
+
+    #work .proCard .tag {
+        position: absolute;
+        bottom: 70px;
+        left: 14px;
+        display: flex;
+        gap: 8px;
+    }
+
+    #work .proCard h2 {
+        font-size: 24px;
+        left: 14px;
+        bottom: 14px;
     }
 }
 
@@ -498,6 +516,10 @@
         color: #333;
     }
 
+    #work h2 {
+        font-size: 24px;
+    }
+
     #work .categories {
         margin-bottom: 20px;
     }
@@ -509,5 +531,19 @@
         border: 1px solid #ddd;
         cursor: pointer;
         transition: 0.3s;
+    }
+
+    #work .proCard .tag {
+        position: absolute;
+        bottom: 70px;
+        left: 14px;
+        display: flex;
+        gap: 8px;
+    }
+
+    #work .proCard h2 {
+        font-size: 24px;
+        left: 14px;
+        bottom: 14px;
     }
 }
