@@ -7,21 +7,31 @@ hamburger.addEventListener("click", function() {
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.proCard');
+const moreCards = document.querySelectorAll('.moreCard');
 const projectCountLabel = document.getElementById('count');
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active')
+        button.classList.add('active');
+
         const filterValue = button.getAttribute('data-filter');
-        let count = 0;
+        let totalCount = 0;
         projectCards.forEach(card => {
             if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
                 card.style.display = 'block';
-                count++;
+                totalCount++;
             } else {
                 card.style.display = 'none';
             }
-        })
-        projectCountLabel.innerText = count;
+        });
+        moreCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'block';
+                totalCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        projectCountLabel.innerText = totalCount;
     });
 });
