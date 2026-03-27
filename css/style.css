@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
 
+:root {
+    --font-family: "Inter", sans-serif;
+    --primary-color: #fff;
+    --secondary-color: #94a3b8;
+    --anchor-color: #7a7a7a;
+    --subtitle-color: #64748b;
+    --blue-color: #007bff;
+    --btn-gradient: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
+    --btn-color: #1E293B;
+    --card-bg: #111113;
+    --tag-bg: rgba(45, 212, 191, 0.1);
+    --card-border: #1c1c1f;
+    --card-hover: #0088A3;
+    --heading-hover: #22d3ee;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +23,14 @@
 }
 
 body {
-   font-family: "Inter", sans-serif;
+    background: linear-gradient(90deg,#071421 0%,#0E2238 50%,#0B1020 100%);
+    font-family: var(--font-family);
+    color: var(--primary-color);
 }
 
 a {
     text-decoration: none;
-    color: #7a7a7a;
+    color: var(--anchor-color);
 }
 
 h1, h2, h3, h4, h5, h6, a, p, span, ul, ol {
@@ -28,7 +46,7 @@ h1, h2, h3, h4, h5, h6, a, p, span, ul, ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #1E293B;
+    border: 1px solid var(--btn-color);
     background-color: transparent;
     line-height: 1.6;
     color: #94A3B8;
@@ -159,7 +177,7 @@ header nav p {
 }
 
 #navbarSupportedContent ul li a {
-    color: #c7c7c7;
+    color: var(--secondary-color);
     font-size: 16px;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
@@ -169,9 +187,9 @@ header nav p {
 }
 
 #navbarSupportedContent ul li a:hover {
-    color: #fff;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
+    color: var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
 }
 
 .hamburger {
@@ -193,7 +211,7 @@ header nav p {
 .hamburger.is-active .hamburger-inner, 
 .hamburger.is-active .hamburger-inner:after, 
 .hamburger.is-active .hamburger-inner:before {
-    background-color: #007bff;
+    background-color: var(--blue-color);
 }
 
 .hamburger-box {
@@ -216,8 +234,8 @@ header nav p {
 }
 
 header nav ul li button {
-    background: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
-    color: #FFFFFF;
+    background: var(--btn-gradient);
+    color: var(--primary-color);
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 500;
@@ -254,7 +272,6 @@ header nav ul li button:hover iconify-icon {
 /* -------------------------------------------------------------------------- */
 /*                               Banner Section                               */
 #banner {
-    background: linear-gradient(90deg,#071421 0%,#0E2238 50%,#0B1020 100%);
     height: 900px;
     position: relative;
     scroll-margin-top: 80px;
@@ -270,7 +287,7 @@ header nav ul li button:hover iconify-icon {
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    background: rgba(45, 212, 191, 0.1);
+    background: var(--tag-bg);
     border: 1px solid rgba(45, 212, 191, 0.2);
     border-radius: 100px;
     color: #2DD4BF;
@@ -351,8 +368,8 @@ header nav ul li button:hover iconify-icon {
 
 .bannerLeft .btn_secondary {
     background: transparent;
-    color: white;
-    border: 1px solid #1E293B;
+    color: var(--primary-color);
+    border: 1px solid var(--btn-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -384,7 +401,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .bannerLeft .amolnama p {
-    color: #64748B;
+    color: var(--subtitle-color);
     font-size: 16px;
     margin-top: 5px;
 }
@@ -548,7 +565,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .menu li:hover a {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .menu li button {
@@ -614,7 +631,6 @@ header nav ul li button:hover iconify-icon {
 /* -------------------------------------------------------------------------- */
 /*                                About Section                               */
 #about {
-    background: radial-gradient(circle at 20% 30%, #082f49 0%,    #020617 70%,   #000000 100%);
     height: 800px;
     scroll-margin-top: 80px;
 }
@@ -624,10 +640,10 @@ header nav ul li button:hover iconify-icon {
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    background: rgba(45, 212, 191, 0.1);
+    background: var(--tag-bg);
     border: 1px solid rgba(45, 212, 191, 0.2);
     border-radius: 100px;
-    color: #22d3ee;
+    color: var(--heading-hover);
     font-size: 14px;
     font-weight: 400;
     margin: 100px 0 40px;
@@ -638,15 +654,18 @@ header nav ul li button:hover iconify-icon {
     line-height: 1.1;
     margin-bottom: 24px;
     font-weight: 700;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .aboutLeft h1 span {
-    color: #00d2ff;
+    background: var(--btn-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .aboutLeft p {
-    color: #94a3b8;
+    color: var(--secondary-color);
     text-align: justify;
 }
 
@@ -672,15 +691,15 @@ header nav ul li button:hover iconify-icon {
     max-width: 250px;
     max-height: 250px;
     text-align: left;
-    background: #111113;
+    background: var(--card-bg);
     margin-bottom: 20px;
     border-radius: 28px;
-    border: 1px solid #1c1c1f;
+    border: 1px solid var(--card-border);
     transition: .25s;
 }
 
 .aboutRight .toppings .topppu:hover {
-    border: 1px solid #0088A3;
+    border: 1px solid var(--card-hover);
     background: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
 }
 
@@ -703,7 +722,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .aboutRight .toppings .topppu h3 {
-    color: #ffffff;
+    color: var(--primary-color);
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 8px;
@@ -711,7 +730,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .aboutRight .toppings .topppu p {
-    color: #7a7a7a;
+    color: var(--anchor-color);
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -735,7 +754,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .heading h1 {
-  color: #1a1a1a;
+  color: #fff;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.1;
@@ -744,7 +763,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .heading p {
-  color: #555555; 
+  color: var(--subtitle-color); 
   font-size: 20px;
   line-height: 1.6;
   font-weight: 400;
@@ -752,23 +771,24 @@ header nav ul li button:hover iconify-icon {
 }
 
 .skillCard {
-    background: #fff;
-    border: 1px solid #c7c7c7;
+    background: var(--card-bg);
+    border: 1px solid #1c1c1f;
     border-radius: 16px;
     padding: 32px;
     transition: 0.3s ease;
 }
 
 .skillCard:hover {
-    background: #dbe3ea;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
+    box-shadow: 0 0 15px rgba(0, 139, 139, 0.3);
+    border: 1px solid var(--card-hover);
 }
 
 .skillCard .iconify {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #7b2ff7, #f107a3);
-    color: #fff;
+    background: var(--btn-gradient);
+    color: var(--primary-color);
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -790,12 +810,12 @@ header nav ul li button:hover iconify-icon {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #111;
+    color: var(--primary-color);
 }
 
 .skillCard .cardData p {
     font-size: 16px;
-    color: #555;
+    color: var(--secondary-color);
     margin-bottom: 15px;
     line-height: 1.6;
 }
@@ -807,12 +827,12 @@ header nav ul li button:hover iconify-icon {
 }
 
 .skillCard .cardData .tags span {
-    background: #f1f1f1;
+    background: var(--tag-bg);
     padding: 6px 12px;
-    border: 1px solid #c7c7c7;
+    border: 1px solid var(--btn-color);
     border-radius: 20px;
     font-size: 14px;
-    color: #333;
+    color: var(--secondary-color);
 }
 /* -------------------------------------------------------------------------- */
 
@@ -833,23 +853,25 @@ header nav ul li button:hover iconify-icon {
     padding: 8px 20px;
     font-size: 18px;
     border-radius: 12px;
-    border: 1px solid #ddd;
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--card-border);
     cursor: pointer;
     transition: 0.3s;
 }
 
 #work .categories button.active {
     background: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
-    color: white; 
     border-color: #007bff;
 }
 
 #work .proCard {
+    background: var(--card-bg);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--card-border);
     margin-bottom: 20px;
 }
 
@@ -869,7 +891,8 @@ header nav ul li button:hover iconify-icon {
 }
 
 #work .proCard:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 1px solid var(--card-hover);
+    box-shadow: 0 0 15px rgba(0, 139, 139, 0.3);
 }
 
 #work .proCard:hover .img-container img {
@@ -877,7 +900,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 #work .proCard p {
-    color: #64748b;
+    color: var(--subtitle-color);
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 24px;
@@ -888,8 +911,6 @@ header nav ul li button:hover iconify-icon {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    border-top: 1px solid #f1f5f9;
-    border-bottom: 1px solid #f1f5f9;
 }
 
 #work .proCard .statPlate .statistics span {
@@ -899,11 +920,11 @@ header nav ul li button:hover iconify-icon {
 
 #work .proCard .statPlate .statistics h5 {
     font-size: 1.1rem;
-    color: #1e293b;
+    color: var(--subtitle-color);
 }
 
 #work .proCard .statPlate .statistics h6 {
-    color: #64748b;
+    color: var(--subtitle-color);
     font-size: 0.75rem;
 }
 
@@ -913,7 +934,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 #work .proCard .skills span {
-    background: rgba(45, 212, 191, 0.1);
+    background: var(--tag-bg);
     border: 1px solid rgba(45, 212, 191, 0.2);
     color: #0ea5e9;
     padding: 4px 12px;
@@ -979,7 +1000,7 @@ header nav ul li button:hover iconify-icon {
     font-size: 12px;
     font-weight: 600;
     backdrop-filter: blur(4px);
-    background: rgba(45, 212, 191, 0.1);
+    background: var(--tag-bg);
     border: 1px solid rgba(45, 212, 191, 0.2);
     color: #2DD4BF;
 }
@@ -996,15 +1017,16 @@ header nav ul li button:hover iconify-icon {
 #work .moreCard {
     margin-bottom: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    background: var(--card-bg);
 }
 
 #work .moreCard:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 1px solid var(--card-hover);
+    box-shadow: 0 0 15px rgba(0, 139, 139, 0.3);
 }
 
 #work .moreCard .img-container {
@@ -1080,18 +1102,18 @@ header nav ul li button:hover iconify-icon {
 
 #work .moreCard .card-body h3 {
     margin: 0 0 12px 0;
-    color: #1a1a1a;
+    color: var(--primary-color);
     font-size: 20px;
     font-weight: 700;
     transition: .25s;
 }
 
 #work .moreCard:hover .card-body h3 {
-    color: #008ba3; 
+    color: var(--blue-color);
 }
 
 #work .moreCard .card-body p {
-    color: #6b7280;
+    color: var(--secondary-color);
     font-size:14px;
     line-height: 1.6;
     margin-bottom: 24px;
@@ -1104,10 +1126,10 @@ header nav ul li button:hover iconify-icon {
 }
 
 .moreCard .skills span {
-    background: #f3f4f6;
-    color: #4b5563;
+    background: var(--tag-bg);
+    color: var(--secondary-color);
     padding: 6px 12px;
-    border: 1px solid #9ca3af;
+    border: 1px solid var(--card-border);
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -1115,8 +1137,52 @@ header nav ul li button:hover iconify-icon {
 
 .moreCard .skills span.extra {
     background: transparent;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--card-border);
     border-radius: 20px;
-    color: #9ca3af;
+    color: var(--secondary-color);
+}
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                             Experience Section                             */
+#experience {
+    margin: 100px 0;
+}
+
+#experience h6 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--tag-bg);
+    border: 1px solid var(--card-hover);
+    border-radius: 100px;
+    color: var(--heading-hover);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#experience h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#experience h1 span {
+    background: var(--btn-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#experience p {
+  color: var(--subtitle-color); 
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 50px;
 }
 /* -------------------------------------------------------------------------- */
