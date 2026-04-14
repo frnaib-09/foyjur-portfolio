@@ -14,6 +14,7 @@
     --card-border: #1c1c1f;
     --card-hover: #0088A3;
     --heading-hover: #22d3ee;
+    --common-shadow: 0px 10px 20px -5px rgba(0, 163, 177, 0.5);
 }
 
 * {
@@ -253,7 +254,7 @@ header nav ul li button iconify-icon {
 }
 
 header nav ul li button:hover {
-    box-shadow: 0px 10px 20px -5px rgba(0, 163, 177, 0.5);
+    box-shadow: var(--common-shadow);
 }
 
 header nav ul li button:hover iconify-icon {
@@ -587,7 +588,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .menu li button:hover {
-    box-shadow: 0px 10px 20px -5px rgba(0, 163, 177, 0.5);
+    box-shadow: var(--common-shadow);
 }
 
 #banner .scroll {
@@ -667,6 +668,7 @@ header nav ul li button:hover iconify-icon {
 .aboutLeft p {
     color: var(--secondary-color);
     text-align: justify;
+    font-size: 18px;
 }
 
 .aboutRight {
@@ -1149,6 +1151,7 @@ header nav ul li button:hover iconify-icon {
     margin: 100px 0;
 }
 
+#testimonial h6,
 #experience h6 {
     display: inline-flex;
     align-items: center;
@@ -1163,6 +1166,7 @@ header nav ul li button:hover iconify-icon {
     margin-bottom: 40px;
 }
 
+#testimonial h1,
 #experience h1 {
     font-size: 3.5rem;
     line-height: 1.1;
@@ -1171,6 +1175,7 @@ header nav ul li button:hover iconify-icon {
     color: var(--primary-color);
 }
 
+#testimonial h1 span,
 #experience h1 span {
     background: var(--btn-gradient);
     -webkit-background-clip: text;
@@ -1178,11 +1183,106 @@ header nav ul li button:hover iconify-icon {
     -webkit-text-fill-color: transparent;
 }
 
+#testimonial p,
 #experience p {
   color: var(--subtitle-color); 
   font-size: 20px;
   line-height: 1.6;
   font-weight: 400;
   margin-bottom: 50px;
+}
+
+.jobCard {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    margin-bottom: 24px;
+    gap: 28px;
+    transition: 0.25s;
+}
+
+.jobCard:hover {
+    background: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
+    border: 1px solid var(--card-hover);
+    box-shadow: 0 0 15px rgba(0, 139, 139, 0.3);
+}
+
+.jobCard .jobLeft {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--btn-gradient);
+    color: var(--primary-color);
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: var(--common-shadow);
+}
+
+.jobRIght span {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    background: var(--tag-bg);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    color: #2DD4BF;
+}
+
+.jobRIght span iconify-icon {
+    margin-right: 8px;
+}
+
+.jobCard .jobRIght h3 {
+    color: var(--primary-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.jobCard .jobRIght h5 {
+    color: var(--heading-hover);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.jobCard .jobRIght p {
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.jobCard .jobRIght h4 {
+    color: var(--anchor-color);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.jobCard .jobRIght ul li {
+    background: #000;
+    color: var(--anchor-color);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jobCard .jobRIght ul li iconify-icon {
+    color: #22d3ee;
 }
 /* -------------------------------------------------------------------------- */
