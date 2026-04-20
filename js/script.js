@@ -35,3 +35,17 @@ filterButtons.forEach(button => {
         projectCountLabel.innerText = totalCount;
     });
 });
+
+
+$('.comments').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  dotsClass: 'dots',
+  pauseOnHover: false,
+  prevArrow: $('.left'),
+  nextArrow: $('.right')
+});

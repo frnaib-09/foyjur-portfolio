@@ -10,6 +10,7 @@
     --btn-gradient: linear-gradient(90deg, #0EA5E9 0%, #2563EB 100%);
     --btn-color: #1E293B;
     --card-bg: #111113;
+    --hover-bg: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
     --tag-bg: rgba(45, 212, 191, 0.1);
     --card-border: #1c1c1f;
     --card-hover: #0088A3;
@@ -234,6 +235,7 @@ header nav p {
     right: 0;
 }
 
+#contact form button,
 header nav ul li button {
     background: var(--btn-gradient);
     color: var(--primary-color);
@@ -248,15 +250,18 @@ header nav ul li button {
     transition: 0.25s ease;
 }
 
+#contact form button iconify-icon,
 header nav ul li button iconify-icon {
     margin-left: 5px;
     transition: .25s;
 }
 
+#contact form button:hover,
 header nav ul li button:hover {
     box-shadow: var(--common-shadow);
 }
 
+#contact form button:hover iconify-icon,
 header nav ul li button:hover iconify-icon {
     transform: translateX(5px);
 }
@@ -636,6 +641,8 @@ header nav ul li button:hover iconify-icon {
     scroll-margin-top: 80px;
 }
 
+#testimonial h6,
+#experience h6,
 .aboutLeft h6 {
     display: inline-flex;
     align-items: center;
@@ -702,9 +709,10 @@ header nav ul li button:hover iconify-icon {
 
 .aboutRight .toppings .topppu:hover {
     border: 1px solid var(--card-hover);
-    background: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
+    background: var(--hover-bg);
 }
 
+#testimonial .comments .cmntCard .quote,
 .aboutRight .toppings .topppu iconify-icon {
     background: rgba(0, 210, 255, 0.08);
     width: 64px;
@@ -781,7 +789,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .skillCard:hover {
-    background: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
+    background: var(--hover-bg);
     box-shadow: 0 0 15px rgba(0, 139, 139, 0.3);
     border: 1px solid var(--card-hover);
 }
@@ -1204,7 +1212,7 @@ header nav ul li button:hover iconify-icon {
 }
 
 .jobCard:hover {
-    background: linear-gradient(315deg, #111113 0%, #0f1a1d 100%);
+    background: var(--hover-bg);
     border: 1px solid var(--card-hover);
     box-shadow: 0 0 15px rgba(0, 139, 139, 0.3);
 }
@@ -1286,3 +1294,276 @@ header nav ul li button:hover iconify-icon {
     color: #22d3ee;
 }
 /* -------------------------------------------------------------------------- */
+
+/* testimonial section */
+#testimonial {
+    margin: 50px 0;
+    position: relative;
+}
+
+.comments {
+    margin: 0 10px;
+}
+
+.cmntCard {
+    background: var(--card-bg);
+    padding: 32px;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    transition: .25s;
+}
+
+.cmntCard:hover {
+    background: var(--hover-bg);
+    border: 1px solid var(--card-hover);
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--card-hover);
+    margin-bottom: 24px;
+}
+
+#testimonial .cmntCard .cmnt p {
+    margin-bottom: 0;
+}
+
+#testimonial .cmntCard .cmnt h6 {
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+    text-align: right;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.dots li button {
+    background: var(--subtitle-color);
+    border: none;
+    width: 20px;
+    height: 12px;
+    border-radius: 20px;
+    margin-top: 32px;
+    color: transparent;
+    transition: .25s;
+}
+
+.dots .slick-active button {
+    width: 44px;
+    background: var(--heading-hover);
+}
+
+.right,
+.left {
+    position: absolute;
+    bottom: 27%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 45px;
+    color: var(--heading-hover);
+    text-align: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.left {
+    left: 60px;
+}
+
+.right {
+    right: 60px;
+}
+
+.left:active {
+    transform: translateY(-50%) scale(0.7);
+    transition: all 0.25s;
+}
+
+.right:active {
+    transform: translateY(-50%) scale(0.7);
+    transition: all 0.25s;
+}
+
+/* contact section */
+#contact {
+    padding: 100px 0;
+}
+
+.conData {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.conData span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--subtitle-color);
+    border-radius: 14px;
+}
+
+.conData .mail {
+    color: #FF5252;
+    background: #241B1B;
+}
+
+.conData .wp {
+    background: #1A241E;
+    color: #25D366;
+}
+
+.conData .linkedin {
+    background: #1B222C;
+    color: #00A0DC;
+}
+
+.conData .git {
+    background: #222222;
+    color: #FFFFFF;
+}
+
+.conData .loc {
+    background: #24211B;
+    color: #FFB300;
+}
+
+.conData p {
+    font-size: 14px;
+    color: var(--subtitle-color);
+    margin-bottom: 12px;
+}
+
+.conData h6,
+.conData h6 a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+form {
+    width: 100%;
+    border: 1px solid var(--card-border);
+    padding: 32px;
+    background: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: var(--common-shadow);
+}
+
+label {
+    display: block;
+    color: var(--secondary-color);
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+textarea,
+select,
+input {
+    width: 100%;
+    margin: 10px 0;
+    background: #000;
+    border: none;
+    padding: 16px;
+    border-radius: 16px;
+    color: var(--primary-color);
+    border: 2px solid transparent;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+    border: 2px solid var(--card-hover);
+    outline: none;
+}
+
+#contact form button {
+    width: 100%;
+    padding: 12px 0;
+}
+
+/* footer section */
+footer {
+    padding: 100px 0 50px;
+    background: #111;
+}
+
+footer h4 {
+    background: linear-gradient(to right, #A78BFA, #C084FC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+footer h5 {
+    font-size: 14px;
+    color: var(--anchor-color);
+}
+
+footer p {
+    font-size: 16px;
+    color: var(--anchor-color);
+    margin-bottom: 24px;
+}
+
+footer .quickLinks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+footer .quickLinks a {
+    background: #0B0B0C;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 12px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footMid h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer .footRight,
+footer .footMid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+footer .footRight ul li,
+footer .footMid ul li {
+    margin-bottom: 16px;
+}
+
+footer .footRight ul li a:hover,
+footer .footMid ul li a:hover {
+    color: var(--heading-hover);
+}
