@@ -233,7 +233,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                              Work Section                               -->
     <section id="work">
-        <div class="container">
+        <div class="container" id="mix-container">
             <div class="row">
                 <div class="heading col-lg-12">
                     <h5>portfolio</h5>
@@ -245,9 +245,9 @@
                 <div class="col-lg-8 col-12">
                     <div class="categories">
                         <button class="filter-btn active" data-filter="all">All Projects</button>
-                        <button class="filter-btn" data-filter="web">Web Apps</button>
-                        <button class="filter-btn" data-filter="mobile">Mobile</button>
-                        <button class="filter-btn" data-filter="api">API</button>
+                        <button class="filter-btn" data-filter=".web">Web Apps</button>
+                        <button class="filter-btn" data-filter=".mobile">Mobile</button>
+                        <button class="filter-btn" data-filter=".api">API</button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-12">
@@ -260,8 +260,8 @@
                 <div class="col-lg-12">
                     <h2>Featured Projects</h2>
                 </div>
-                <div class="col-lg-6 col-12 col-md-6">
-                    <div class="card proCard" data-category="web">
+                <div class="col-lg-6 col-12 col-md-6 mix web">
+                    <div class="card proCard">
                         <div class="img-container">
                             <img src="./images/saas.jpg" class="card-img-top img-fluid" alt="">
                             <div class="quickLinks">
@@ -310,8 +310,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 col-md-6">
-                    <div class="card proCard" data-category="web">
+                <div class="col-lg-6 col-12 col-md-6 mix web">
+                    <div class="card proCard">
                         <div class="img-container">
                             <img src="./images/e com.jpg" class="card-img-top img-fluid" alt="">
                             <div class="quickLinks">
@@ -359,8 +359,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 col-md-6">
-                    <div class="card proCard" data-category="web">
+                <div class="col-lg-6 col-12 col-md-6 mix web">
+                    <div class="card proCard">
                         <div class="img-container">
                             <img src="./images/healthcare.jpg" class="card-img-top img-fluid" alt="">
                             <div class="quickLinks">
@@ -414,8 +414,8 @@
                 <div class="col-lg-12">
                     <h2>More Projects</h2>
                 </div>
-                <div class="col-lg-4 col-12 col-md-4">
-                    <div class="card moreCard" data-category="api">
+                <div class="col-lg-4 col-12 col-md-4 mix api">
+                    <div class="card moreCard">
                         <div class="img-container">
                             <img src="./images/financial api.jpg" class="card-img-top img-fluid" alt="">
                             <div class="quickLinks">
@@ -438,8 +438,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-12 col-md-4">
-                    <div class="card moreCard" data-category="mobile">
+                <div class="col-lg-4 col-12 col-md-4 mix mobile">
+                    <div class="card moreCard">
                         <div class="img-container">
                             <img src="./images/fitness app.jpg" class="card-img-top img-fluid" alt="">
                             <div class="quickLinks">
@@ -462,8 +462,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-12 col-md-4">
-                    <div class="card moreCard" data-category="web">
+                <div class="col-lg-4 col-12 col-md-4 mix web">
+                    <div class="card moreCard">
                         <div class="img-container">
                             <img src="./images/content.jpg" class="card-img-top img-fluid" alt="">
                             <div class="quickLinks">
@@ -765,7 +765,7 @@
                         </div>
                         <div class="col-lg-10 col-9 col-md-10">
                             <p>GitHub</p>
-                            <h6><a href="https://github.com/frnaib-09">Foyjur Rafee</a></h6>
+                            <h6><a href="https://github.com/frnaib-09">frnaib-09</a></h6>
                         </div>
                     </div>
                     <div class="conData">
@@ -810,10 +810,10 @@
                         <h4>Laravel Architect</h4>
                         <p>Full-stack developer specializing in Laravel and modern web technologies. Building scalable solutions that make a difference.</p>
                         <div class="quickLinks">
-                            <a href="https://github.com/frnaib-09"><iconify-icon icon="mynaui:github-solid"></iconify-icon></a>
-                            <a href="https://www.linkedin.com/in/foyjur-rafee-9aa8513b1/"><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
-                            <a href="https://www.instagram.com/_debugging_the_tone_/"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
-                            <a href="https://www.facebook.com/foyjur.rafee.99"><iconify-icon icon="ri:facebook-fill"></iconify-icon></a>
+                            <a class="github" href="https://github.com/frnaib-09"><iconify-icon icon="mynaui:github-solid"></iconify-icon></a>
+                            <a class="link" href="https://www.linkedin.com/in/foyjur-rafee-9aa8513b1/"><iconify-icon icon="ri:linkedin-fill"></iconify-icon></a>
+                            <a class="insta" href="https://www.instagram.com/_debugging_the_tone_/"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+                            <a class="fb" href="https://www.facebook.com/foyjur.rafee.99"><iconify-icon icon="ri:facebook-fill"></iconify-icon></a>
                         </div>
                     </div>
                     <div class="footMid col-lg-3">
@@ -848,7 +848,8 @@
 
     <a href="#" class="goToTop"><iconify-icon icon="solar:map-arrow-up-bold"></iconify-icon></a>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>

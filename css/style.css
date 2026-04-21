@@ -1491,6 +1491,7 @@ input {
 textarea:focus,
 select:focus,
 input:focus {
+    background: #000;
     border: 2px solid var(--card-hover);
     outline: none;
 }
@@ -1534,15 +1535,38 @@ footer .quickLinks {
 }
 
 footer .quickLinks a {
-    background: #0B0B0C;
+    background: transparent;
     width: 40px;
     height: 40px;
-    font-size: 24px;
-    border-radius: 12px;
-    color: var(--primary-color);
+    font-size: 26px;
+    border-radius: 50%;
     display: flex;
+    color: var(--primary-color);
     justify-content: center;
     align-items: center;
+}
+
+footer .quickLinks .github,
+footer .quickLinks .link,
+footer .quickLinks .insta,
+footer .quickLinks .fb {
+    transition: .25s;
+}
+
+footer .quickLinks .github:hover {
+    background: linear-gradient(45deg, #24292e, #4b5563);
+}
+
+footer .quickLinks .link:hover {
+    background: linear-gradient(45deg, #0077B5, #00A0DC);
+}
+
+footer .quickLinks .insta:hover {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+}
+
+footer .quickLinks .fb:hover {
+    background: linear-gradient(45deg, #1877F2, #0056b3);
 }
 
 footer .footMid h6 {

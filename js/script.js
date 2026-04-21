@@ -5,34 +5,32 @@ hamburger.addEventListener("click", function() {
 });
 
 
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.proCard');
-const moreCards = document.querySelectorAll('.moreCard');
-const projectCountLabel = document.getElementById('count');
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
 
-        const filterValue = button.getAttribute('data-filter');
-        let totalCount = 0;
-        projectCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                card.style.display = 'block';
-                totalCount++;
-            } else {
-                card.style.display = 'none';
-            }
-        });
-        moreCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                card.style.display = 'block';
-                totalCount++;
-            } else {
-                card.style.display = 'none';
-            }
-        });
-        projectCountLabel.innerText = totalCount;
+const containerEl = document.querySelector('#mix-container');
+const countEl = document.getElementById('count');
+
+const mixer = mixitup(containerEl, {
+    selectors: {
+        target: '.mix'
+    },
+    animation: {
+        duration: 400,
+        effects: 'fade scale(0.8)'
+    },
+    callbacks: {
+        onMixEnd: function(state) {
+            countEl.innerText = state.totalShow;
+        }
+    }
+});
+
+// Active button UI
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
     });
 });
 
@@ -47,5 +45,6 @@ $('.comments').slick({
   dotsClass: 'dots',
   pauseOnHover: false,
   prevArrow: $('.left'),
-  nextArrow: $('.right')
+  nextArrow: $('.right'),
+  pauseOnHover: true
 });
