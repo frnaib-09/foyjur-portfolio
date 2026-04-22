@@ -278,7 +278,7 @@ header nav ul li button:hover iconify-icon {
 /* -------------------------------------------------------------------------- */
 /*                               Banner Section                               */
 #banner {
-    height: 900px;
+    min-height: 100vh;
     position: relative;
     scroll-margin-top: 80px;
 }
@@ -637,7 +637,7 @@ header nav ul li button:hover iconify-icon {
 /* -------------------------------------------------------------------------- */
 /*                                About Section                               */
 #about {
-    height: 800px;
+    min-height: 100vh;
     scroll-margin-top: 80px;
 }
 

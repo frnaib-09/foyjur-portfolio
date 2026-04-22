@@ -194,7 +194,7 @@
     }
 }
 
-/* @media (min-width: 351px) and (max-width: 390px) {
+@media (min-width: 351px) and (max-width: 390px) {
     #banner {
         height: 1300px;
     }
@@ -547,4 +547,4 @@
         left: 14px;
         bottom: 14px;
     }
-} */
+}
